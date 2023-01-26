@@ -1,20 +1,25 @@
 // pages/blog/[id].js
 import { client } from "../../libs/client";
 import styles from '../../styles/Home.module.scss';
+import Layout from "../../components/layout";
+import MainNav from "../../components/mainnav";
 
 export default function BlogId({ blog }) {
     return (
-      <main className={styles.main}>
-        <h1 className={styles.title}>{blog.title}</h1>
-        <p className={styles.publishedAt}>{blog.publishedAt}</p>
-        <p>{blog.category && blog.category.name}</p>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `${blog.body}`,
-          }}
-          className={styles.post}
-        />
-      </main>
+      <Layout>
+        <div className="mx-4">
+          <h2 className="text-xl mb-4">{blog.title}</h2>
+          <p className=" mb-2">{blog.publishedAt}</p>
+          <p className="font-semibold mb-2">{blog.category && blog.category.name}</p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `${blog.body}`,
+            }}
+            className={styles.post}
+          />
+        </div>
+      <MainNav />
+      </Layout>
     );
   }
 

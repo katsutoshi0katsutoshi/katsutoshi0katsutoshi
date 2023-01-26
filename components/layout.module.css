@@ -1,0 +1,19 @@
+.container {
+  padding: 0 0;
+}
+
+.header {
+  width: 100%;
+  z-index: 15;
+  position: relative;
+}
+
+.backToHome {
+  margin: 3rem 0 0;
+  padding: 1rem;
+}
+
+.site_wrap{
+  width: 100%;
+
+}

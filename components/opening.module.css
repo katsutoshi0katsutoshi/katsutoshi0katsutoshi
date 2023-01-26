@@ -1,0 +1,24 @@
+.opening_wrap{
+    width: 100vw;
+height: 100vh;
+position: absolute;
+top: 0;
+left: 0;
+background: #333;
+z-index: 100;
+animation: opening 5s ease 0s 1 forwards;
+
+}
+
+@keyframes opening {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+    100% {
+      opacity: 0;
+visibility: hidden;
+    }
+  }
